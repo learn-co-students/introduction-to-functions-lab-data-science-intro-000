@@ -18,7 +18,7 @@ Imagine we are working on our list of travel destinations -- which is really tur
 ```python
 travel_destinations = ['argentina', 'mexico', 'italy', 'finland', 'canada', 'croatia']
 def number_of_destinations():
-    pass
+    return len(travel_destinations)
 ```
 
 
@@ -31,7 +31,7 @@ Now write another function called `next_up` that returns our first destination (
 
 ```python
 def next_up():
-    pass
+    return travel_destinations[0]
 ```
 
 
@@ -52,7 +52,7 @@ Ok, now write a function called `favorite_destination` that returns the string `
 ```python
 travel_destinations = ['argentina', 'mexico', 'italy', 'finland', 'canada', 'croatia']
 def favorite_destination():
-    pass
+    return 'madagascar'
 ```
 
 
@@ -65,6 +65,7 @@ Again, let's declare an array called `travel_destinations`. Change the function 
 
 ```python
 travel_destinations = ['argentina', 'mexico', 'italy', 'finland', 'canada', 'croatia']
+travel_destinations.append('madagascar')
 favorite_destination()
 travel_destinations[-1] # 'madagascar'
 ```
@@ -75,7 +76,10 @@ Now let's write another function which iterates through the list of `destination
 ```python
 travel_destinations = ['argentina', 'mexico', 'italy', 'finland', 'canada', 'croatia']
 def capitalize_countries():
-    pass
+    capitalized_destinations = []
+    for index in list(range(0, len(travel_destinations))):
+        capitalized_destinations.append(travel_destinations[index].capitalize())
+    return capitalized_destinations
 ```
 
 
